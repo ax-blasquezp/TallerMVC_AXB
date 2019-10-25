@@ -36,7 +36,7 @@ namespace TallerMVC.Controllers
         }
 
         [Authorize]
-        public IActionResult Actualizar()
+        public IActionResult Contactenos()
         {
             return View();
         }
