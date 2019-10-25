@@ -21,7 +21,8 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ContactenosContext>(opt =>
-               opt.UseInMemoryDatabase("ContactenosList"));
+               //opt.UseInMemoryDatabase("ContactenosList"));
+               opt.UseSqlServer(Configuration.GetConnectionString("ContactenosDatabase")));
             services.AddControllers();
         }
 
